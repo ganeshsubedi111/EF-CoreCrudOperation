@@ -1,0 +1,42 @@
+﻿@model CrudEntityFramework.Models.BookModel
+
+
+<h1 class="text-center ">Edit The Book Model</h1>
+
+
+<hr />
+
+
+<div class="row d-flex justify-content-center align-items-center container" style="background-color: #f2f2f2; height: 300px;">
+    <div class="col-md-3">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="BookId" />
+            <div class="form-group">
+                <label asp-for="Bookname" class="control-label text-primary"></label>
+                <input asp-for="Bookname" class="form-control" />
+                <span asp-validation-for="Bookname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Author" class="control-label"></label>
+                <input asp-for="Author" class="form-control" />
+                <span asp-validation-for="Author" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-2">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+            <div>
+                <a  class="btn btn-dark mt-2"asp-action="Index">Back to List</a>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+
